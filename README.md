@@ -3,6 +3,27 @@ Repository to save PostgreSQL scripts files
 
 # Configuration File
 
+## postgresql.conf
+
+- Path: /var/lib/pgsql/<verion>/data
+- Name: postgresql.conf
+
+
+## postgresql.auto.conf
+
+- Path: /var/lib/pgsql/<verion>/data
+- Name: postgresql.auto.conf
+
+## pg_hba.conf
+
+- Path: /var/lib/pgsql/<verion>/data
+- Name: pg_hba.conf
+
+## pg_ident.conf
+
+- Path: /var/lib/pgsql/<verion>/data
+- Name: pg_ident.conf
+
 # Authentication and Authorization
 
 ## Create a superuser
@@ -192,7 +213,17 @@ insert into t_tags(tag) values ('Pen') on conflict(tag) do update set tag = excl
 
 ## Query Data
 
+## Data Types
 
+- Bolean
+- Char, Varchar, Text
+- Numeric
+- Decimal
+- Date, time, timestamp
+- UUID
+- Array
+- hstore
+- JSON
 
 # Miscelaneous
 
@@ -231,7 +262,4 @@ SET ROLE <role_name>;
 \c database user
 ```
 
-
-
-
-teste
+select * from information_schema.tables where table_name='awsdms_validation_failures_v1';
