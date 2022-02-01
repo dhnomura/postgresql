@@ -263,3 +263,11 @@ SET ROLE <role_name>;
 ```
 
 select * from information_schema.tables where table_name='awsdms_validation_failures_v1';
+
+## Parameters
+
+SELECT current_setting('max_connections');
+
+select * from pg_settings;
+
+show all;
